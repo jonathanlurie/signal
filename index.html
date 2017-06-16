@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=keywords  content="coma, separated, keywords" />
+    <meta name=description  content="This is the description" />
+    <meta  property=og:title content="Page Title" />
+    <meta  property=og:description content="This is the description" />
+    <meta  property=og:image content="http://me.jonathanlurie.fr/images/bg.jpg" />
+
+    <title>The Title</title>
+
+    <!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
+    <style>
+
+      body {
+        margin:0;
+        font-family: "Lucida Console", monospace;
+        font-size: 15px;
+      }
+
+    </style>
+
+    <script src="ft1d.js"></script>
+  </head>
+  <body>
+    <div id="main">hello</div>
+
+    <script>
+
+    var signalData =  generate1DSignal(
+                    1,  // amplitude
+                    1,  // signal freq
+                    0,  // signal phase
+                    10,  // sampling freq
+                    100  // number of samples (should cover more than 2 periods)
+                  );
+
+    console.log( signalData.fx );
+
+    var ft = ft1D( signalData.fx )
+
+    console.log( ft );
+
+
+    </script>
+
+  <body>
+</html>
